@@ -17,38 +17,32 @@ function lakukanLooping(arrPegawai) {
   // ! JANGAN DIMODIFIKASI
   let dataYangAkanDilooping = arrPegawai;
 
-  /*
-    TODO 1: Buatlah sebuah variabel bernama "hasilLooping" 
-      yang berisi gabungan nama depan dan belakang dari masing masing pegawai
+  //create new array of fullName
+  let hasilLooping = [];
+  for (let i = 0; i < arrayObjectPegawai.length; i++) {
+    hasilLooping.push(
+      arrayObjectPegawai[i].namaDepan + " " + arrayObjectPegawai[i].namaBelakang
+    )
+  }
 
-      Contoh: ["Aisyah Nirmala", "Mansur Faisal", ...]
-  */
-  let hasilLooping = null;
+  //count Male
+  let jumlahPria = 0;
+  for (let i = 0; i < arrayObjectPegawai.length; i++) {
+    if (arrayObjectPegawai[i].jenisKelamin == "M") {
+      jumlahPria = jumlahPria + 1;
+    }
+  }
+  
+  //count Female
+  let jumlahWanita = 0;
+  for (let i = 0; i < arrayObjectPegawai.length; i++) {
+    if (arrayObjectPegawai[i].jenisKelamin == "F") {
+      jumlahWanita = jumlahWanita + 1;
+    }
+  }
 
-  /*
-    TODO 2: Buatlah sebuah variabel bernama "jumlahPria"
-      yang berisi jumlah pria dari masing masing pegawai
-  */
-  let jumlahPria = null;
-
-  /*
-    TODO 3: Buatlah sebuah variabel bernama "jumlahWanita"
-      yang berisi jumlah wanita dari masing masing pegawai
-  */
-  let jumlahWanita = null;
-
-  /*
-    TODO 4: Buatlah sebuah variabel bernama "komentar"
-      yang akan mengomentari apakah lebih banyak Pria atau Wanita
-      
-      Apabila Pria lebih banyak dari Wanita, maka komentar akan berisi:
-        "Jumlah Pria lebih banyak dari Wanita"
-      Apabila Wanita lebih banyak dari Pria, maka komentar akan berisi:
-        "Jumlah Wanita lebih banyak dari Pria"
-      Apabila imbang, maka komentar akan berisi:
-        "Jumlah Pria dan Wanita berimbang"
-  */
-  let komentar = null;
+  //add conclusion
+  let komentar = ( jumlahPria > jumlahWanita ) ? "jumlah pria lebih banyak dari wanita" : "jumlah wanita lebih banyak dari pria";
 
   // ! JANGAN DIMODIFIKASI
   return {
